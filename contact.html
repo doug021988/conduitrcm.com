@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Free Review | Conduit RCM</title>
+  <meta name="description" content="Request your free 30-day remittance review. No cost, no obligation. Conduit RCM identifies and recovers denied claims for independent physician practices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <line x1="3" y1="14" x2="22" y2="14" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M16 7 L23 14 L16 21" fill="none" stroke="#5DCAA5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="4" cy="14" r="3" fill="#9FE1CB"/>
+        <circle cx="23" cy="14" r="3" fill="#ffffff"/>
+      </svg>
+      <span>Conduit <strong>RCM</strong></span>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta active">Free Review</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="contact-hero">
+    <div class="container contact-layout">
+
+      <!-- LEFT: Form -->
+      <div class="contact-form-wrap">
+        <div class="section-label">Get Started</div>
+        <h1>Request your free<br><em>30-day review.</em></h1>
+        <p>Tell us a little about your practice and we'll reach out within one business day to schedule a 30-minute introductory call.</p>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/ConduitRCM" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your name *</label>
+              <input type="text" id="name" name="name" required placeholder="Jane Smith">
+            </div>
+            <div class="form-group">
+              <label for="title">Your title *</label>
+              <input type="text" id="title" name="title" required placeholder="Office Manager">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="practice">Practice name *</label>
+            <input type="text" id="practice" name="practice" required placeholder="ABC Medical Group">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email address *</label>
+              <input type="email" id="email" name="email" required placeholder="jane@yourpractice.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="555-555-5555">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="specialty">Specialty *</label>
+              <select id="specialty" name="specialty" required>
+                <option value="">Select specialty</option>
+                <option>Internal Medicine / Primary Care</option>
+                <option>Orthopedic Surgery</option>
+                <option>Cardiology</option>
+                <option>Gastroenterology</option>
+                <option>Neurology / Neurosurgery</option>
+                <option>OB/GYN</option>
+                <option>Pediatrics</option>
+                <option>Dermatology</option>
+                <option>Urology</option>
+                <option>ENT</option>
+                <option>Pulmonology</option>
+                <option>Rheumatology</option>
+                <option>Urgent Care</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="physicians">Number of physicians</label>
+              <select id="physicians" name="physicians">
+                <option value="">Select range</option>
+                <option>1–2</option>
+                <option>3–5</option>
+                <option>6–10</option>
+                <option>11–20</option>
+                <option>20+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="payers">Primary payers (check all that apply)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="UHC/UMR"> UHC / UMR</label>
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="Aetna"> Aetna</label>
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="Highmark"> Highmark</label>
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="BCBS"> BCBS / Anthem</label>
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="Cigna"> Cigna</label>
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="Humana"> Humana</label>
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="Medicare"> Medicare</label>
+              <label class="checkbox-label"><input type="checkbox" name="payers" value="Medicaid"> Medicaid</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interest">What are you most interested in?</label>
+            <select id="interest" name="interest">
+              <option value="">Select if known</option>
+              <option>Denial recovery &amp; appeal management</option>
+              <option>Contract rate analysis — am I being underpaid?</option>
+              <option>Both denial recovery and contract analysis</option>
+              <option>Just want to see the free review findings first</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="clearinghouse">Clearinghouse / where you get remittances</label>
+            <select id="clearinghouse" name="clearinghouse">
+              <option value="">Select if known</option>
+              <option>Availity</option>
+              <option>Waystar</option>
+              <option>Change Healthcare / Optum</option>
+              <option>Office Ally</option>
+              <option>PDF EOBs from payer portals only</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Anything else you'd like us to know?</label>
+            <textarea id="message" name="message" rows="3" placeholder="Specific payers causing problems, denial types you're seeing, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Request my free review →</button>
+          <p class="form-note">We'll respond within one business day. No spam, no sales pressure — just a 30-minute conversation about what's in your open AR.</p>
+        </form>
+      </div>
+
+      <!-- RIGHT: Info -->
+      <div class="contact-info">
+        <div class="contact-what">
+          <h3>What happens next</h3>
+          <div class="next-step">
+            <div class="next-num">1</div>
+            <div><strong>We reach out within 1 business day</strong><br>A 30-minute intro call to discuss your practice, payer mix, and what you're seeing in denials.</div>
+          </div>
+          <div class="next-step">
+            <div class="next-num">2</div>
+            <div><strong>You sign a BAA</strong><br>A standard Business Associate Agreement — required before any remittance files are shared. Takes 10 minutes to review.</div>
+          </div>
+          <div class="next-step">
+            <div class="next-num">3</div>
+            <div><strong>You share your remittance files</strong><br>835 EDI files from your clearinghouse or PDF EOBs from payer portals. Your billing staff will know how to pull these.</div>
+          </div>
+          <div class="next-step">
+            <div class="next-num">4</div>
+            <div><strong>We deliver your findings within 30 days</strong><br>Full denial pattern report, recoverable estimate, priority work queue, and sample appeal letters.</div>
+          </div>
+        </div>
+
+        <div class="contact-direct">
+          <h3>Prefer to reach out directly?</h3>
+          <a href="mailto:doug@conduitrcm.com" class="direct-link">
+            <span class="direct-icon">✉</span>
+            <span>doug@conduitrcm.com</span>
+          </a>
+          <a href="tel:4123350205" class="direct-link">
+            <span class="direct-icon">✆</span>
+            <span>412-335-0205</span>
+          </a>
+          <a href="https://www.linkedin.com/in/dougweinbrenner" target="_blank" class="direct-link">
+            <span class="direct-icon">in</span>
+            <span>LinkedIn — Doug Weinbrenner</span>
+          </a>
+        </div>
+
+        <div class="contact-promise">
+          <strong>Our promise:</strong> If the free review doesn't surface meaningful recoverable revenue for your practice, we'll tell you — and the analysis is still yours to keep.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+            <line x1="3" y1="14" x2="22" y2="14" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M16 7 L23 14 L16 21" fill="none" stroke="#5DCAA5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="4" cy="14" r="3" fill="#9FE1CB"/>
+            <circle cx="23" cy="14" r="3" fill="#ffffff"/>
+          </svg>
+          <span>Conduit <strong>RCM</strong></span>
+        </a>
+        <p>Revenue flows here.</p>
+      </div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:doug@conduitrcm.com">doug@conduitrcm.com</a>
+        <a href="tel:4123350205">412-335-0205</a>
+        <span>Pittsburgh, PA · Serving practices nationwide</span>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Conduit RCM. All rights reserved.</span></div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
